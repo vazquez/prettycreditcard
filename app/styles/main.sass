@@ -1,23 +1,56 @@
-$background: #fafafa
+$background: lighten(rgba(231, 76, 60,1.0), 0.6)
+
+// (rgba(231, 76, 60,1.0)
+$neutral-cc: #ecf0f1
+
+*
+  box-sizing: border-box
 
 body
   background: $background
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-  color: #332
+  color: #333
 
-.hero-unit
-  margin: 50px auto 0 auto
-  width: 300px
-  font-size: 18px
-  font-weight: 200
-  line-height: 30px
-  background-color: #eee
-  border-radius: 6px
-  padding: 60px
-  h1
-    font-size: 60px
-    line-height: 1
-    letter-spacing: -1px
+html
+  font-size: 16px
+
+.card
+  position: relative
+  width: 25em
+  height: 15em
+  margin: 3em auto
+  padding: 2.8125em 2.25em 1.875em
+  background: $neutral-cc
+  border-radius: 0.75em
+  box-shadow: 3px 4px darken($neutral-cc, 15%)
+
+  .chip
+    position: relative
+    top: 1em
+
+  .card-number
+    display: block
+    padding: 1.5em 0 0 0
+    small
+      display: block
+      font-family: Helvetica Neue
+      color: #aaa
+      font-size: 0.75em
+      margin: 6px 0 0 0
+    input
+      padding: 0px 6px
+      height: 30px
+      width: 55px
+      border-radius: 3px
+      border: 1px solid darken($neutral-cc, 15%)
+      font-size: 18px
+      font-family: Helvetica
+      font-weight: bold
+      color: #666
+      &:focus
+        background: lighten($neutral-cc, 10%)
+        outline: none
+        border-color: rgba(241, 196, 15,0.8)
 
 .browsehappy
   margin: 0.2em 0
