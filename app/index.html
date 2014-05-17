@@ -30,10 +30,14 @@
         <img class="chip" src="https://cdn1.iconfinder.com/data/icons/fatcow/32/card_chip_gold.png" width="40">
 
         <div class="card-number">
-          <input type="textfield" value="3420"/>
-          <input type="textfield"/>
-          <input type="textfield"/>
-          <input type="textfield"/>
+          <input name="cardkey1" type="text" id="cardkey1" onkeyup="moveNextField(this, 'cardkey2')" size="4" maxlength="4" />
+
+          <input name="cardkey2" type="text" id="cardkey2" onkeyup="moveNextField(this, 'cardkey3')" size="4" maxlength="4" />
+
+          <input name="cardkey3" type="text" id="cardkey3" onkeyup="moveNextField(this, 'cardkey4')" size="4" maxlength="4" />
+
+          <input name="cardkey4" type="text" id="cardkey4" size="4" maxlength="4" />
+
           <small>Card Number</small>
         </div>
 

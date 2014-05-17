@@ -1,1 +1,6 @@
-console.log('\'Allo \'Allo!');
+function moveNextField(current, nextFieldID){
+  if(current.value.length >= current.maxLength){
+    document.getElementById(nextFieldID).focus();
+  }
+}
+
