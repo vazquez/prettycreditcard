@@ -1,4 +1,4 @@
-$background: lighten(rgba(231, 76, 60,1.0), 0.6)
+$background: lighten(rgba(52, 73, 94,1.0), 0.6)
 $neutral-cc: #ecf0f1
 
 *
@@ -17,38 +17,51 @@ body
   width: 25em //400
   height: 15em //240
   margin: 3em auto
-  padding: 2.8125em 2.25em 1.875em
+  padding: 2.8125em 1.5em 1.875em
   background: $neutral-cc
   border-radius: 0.75em
   box-shadow: 3px 4px darken($neutral-cc, 15%)
 
   .chip
     position: relative
+    display: block
     top: 1em
 
   .card-number
+    float: left
+
+  .securitycode
+    float: right
+
+  article
+    display: inline-block
+    &.securitycode
+      margin: 0 0 0 1em
+
+  small
     display: block
-    padding: 1.5em 0 0 0
-    small
-      display: block
-      font-family: Helvetica Neue
-      color: #aaa
-      font-size: 0.75em
-      margin: 6px 0 0 0
-    input
-      padding: 0px 6px
-      height: 30px
-      width: 55px
-      border-radius: 3px
-      border: 1px solid darken($neutral-cc, 15%)
-      font-size: 18px
-      font-family: Helvetica
-      font-weight: bold
-      color: #666
-      &:focus
-        background: lighten($neutral-cc, 10%)
-        outline: none
-        border-color: rgba(241, 196, 15,0.8)
+    font-family: Helvetica Neue
+    color: #aaa
+    font-size: 0.75em
+    margin: 6px 0 0 0
+  input.fourtextfield
+    padding: 0px 6px
+    height: 30px
+    width: 55px
+    border-radius: 3px
+    border: 1px solid darken($neutral-cc, 15%)
+    font-size: 18px
+    font-family: Helvetica
+    font-weight: bold
+    color: #666
+    &:focus
+      background: lighten($neutral-cc, 10%)
+      outline: none
+      border-color: rgba(241, 196, 15,0.8)
+
+  input.cvv
+    @extend input.fourtextfield
+    font-size: 26px
 
 .browsehappy
   margin: 0.2em 0
