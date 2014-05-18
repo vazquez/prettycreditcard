@@ -1,5 +1,7 @@
 $background: lighten(rgba(52, 73, 94,1.0), 0.6)
 $neutral-cc: #ecf0f1
+$t-secondary: #aaa
+$t-primary: #666
 
 *
   box-sizing: border-box
@@ -40,19 +42,19 @@ body
   small
     display: block
     font-family: Helvetica Neue
-    color: #aaa
+    color: $t-secondary
     font-size: 0.75em
     margin: 6px 0 0 0
   input.fourtextfield
-    padding: 0px 6px
-    height: 30px
-    width: 55px
-    border-radius: 3px
+    padding: 0px 0.375em
+    height: 1.875em //30
+    width: 3.4375em //55
+    border-radius: 0.1875em //3
     border: 1px solid darken($neutral-cc, 15%)
-    font-size: 18px
+    font-size: 1.125em //18
     font-family: Helvetica
     font-weight: bold
-    color: #666
+    color: $t-primary
     &:focus
       background: lighten($neutral-cc, 10%)
       outline: none
@@ -60,7 +62,6 @@ body
 
   input.cvv
     @extend input.fourtextfield
-    font-size: 26px
 
 .browsehappy
   margin: 0.2em 0
