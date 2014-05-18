@@ -1,3 +1,5 @@
+@import "reset"
+
 $background: lighten(rgba(52, 73, 94,1.0), 0.6)
 $neutral-cc: #ecf0f1
 $t-secondary: #aaa
@@ -5,6 +7,7 @@ $t-primary: #666
 
 *
   box-sizing: border-box
+  -moz-box-sizing: border-box
 
 html
   font-size: 16px
@@ -36,16 +39,14 @@ body
 
   article
     display: inline-block
-    &.securitycode
-      margin: 0 0 0 1em
 
   small
     display: block
     font-family: Helvetica Neue
     color: $t-secondary
     font-size: 0.75em
-    margin: 6px 0 0 0
-  input.fourtextfield
+    margin: 2px 0 0 0
+  input.s_textfield
     padding: 0.25em 0.375em
     width: 3.4375em //55
     border-radius: 0.1875em //3
@@ -60,8 +61,10 @@ body
       outline: none
       border-color: rgba(241, 196, 15,0.8)
 
-  input.cvv
-    @extend input.fourtextfield
+  input.l_textfield
+    @extend input.s_textfield
+    width: 120%
+    margin: 0.625em 0 0 0 //10
 
 .browsehappy
   margin: 0.2em 0
